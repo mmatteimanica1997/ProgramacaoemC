@@ -80,5 +80,73 @@ int main(){
    
     printf(" Carta 1: \n Estado: %c \n Código da Carta: %s \n Nome da Cidade: %s \n População (em habitantes): %d \n Área (em Km²): %.2f \n PIB (em bilhões de Reais): %.2f \n Número de Pontos Turísticos: %d \n Densidade Populacional(hab/km²): %.2f \n PIB per Capita (em reais): %.2f \n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontos1, densidade1, pibpercapita1);
     printf(" \n Carta 2: \n Estado: %c \n Código da Carta: %s \n Nome da Cidade: %s \n População (em habitantes): %d \n Área (em Km²): %.2f \n PIB (em bilhões de Reais): %.2f \n Número de Pontos Turísticos: %d \n Densidade populacional(hab/km²): %.2f \n PIB per Capita (em reais): %.2f \n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontos2, densidade2, pibpercapita2);
+   
+    printf("*******Calculo Super Poder Carta 1 *******\n");
+
+    int comparacaopopulacao1;
+    int comparacaoarea1;
+    int comparacaopib1;
+    int comparacaopontos1;
+    int comparacaodensidade1;
+    int comparacaopibpercapita1;
+    int superpoder1;
+
+    comparacaopopulacao1 = populacao1 > populacao2;
+    printf("A carta 1 tem maior população: %d\n", comparacaopopulacao1);
+
+    comparacaoarea1 = area1 > area2;
+    printf("A carta um tem maior área: %d\n", comparacaoarea1);
+
+    comparacaopib1 = pib1 > pib2;
+    printf("A carta 1 tem um PIB maior: %d\n", comparacaopib1);
+
+    comparacaopontos1 = pontos1 > pontos2;
+    printf("A carta 1 tem mais pontos turísticos: %d\n", comparacaopontos1);
+
+    comparacaodensidade1 = densidade1 < densidade2;
+    printf("A carta 1 tem uma densidade populacional menor: %d\n", comparacaodensidade1);
+
+    comparacaopibpercapita1 = pibpercapita1 > pibpercapita2;
+    printf("A carta 1 tem um PIB per capita maior: %d\n", comparacaopibpercapita1);
+
+    superpoder1 = comparacaopopulacao1 + comparacaoarea1 + comparacaopib1 + comparacaopontos1 + comparacaodensidade1 + comparacaopibpercapita1;
+    printf("O Super - Poder da carta 1 é: %d\n", superpoder1);
+
+    printf("*******Calculo Super Poder Carta 2 *******\n");
+
+    int comparacaopopulacao2;
+    int comparacaoarea2;
+    int comparacaopib2;
+    int comparacaopontos2;
+    int comparacaodensidade2;
+    int comparacaopibpercapita2;
+    int superpoder2;
+
+    comparacaopopulacao2= populacao2 > populacao1;
+    printf("A carta 2 tem maior população: %d\n", comparacaopopulacao2);
+
+    comparacaoarea2= area2 > area1;
+    printf("A carta 2 tem maior área: %d\n", comparacaoarea2);
+
+    comparacaopib2= pib2 > pib1;
+    printf("A carta 2 tem um PIB maior: %d\n", comparacaopib2);
+
+    comparacaopontos2= pontos2 > pontos1;
+    printf("A carta 2 tem mais pontos turísticos: %d\n", comparacaopontos2);
+
+    comparacaodensidade2 = densidade2 < densidade1;
+    printf("A carta 2 tem uma densidade populacional menor: %d\n", comparacaodensidade2);
+
+    comparacaopibpercapita2 = pibpercapita2 > pibpercapita1;
+    printf("A carta 2 tem um PIB per capita maior: %d\n", comparacaopibpercapita2);
+
+    superpoder2 = comparacaopopulacao2 + comparacaoarea2 + comparacaopib2 + comparacaopontos2 + comparacaodensidade2 + comparacaopibpercapita2;
+    printf("O Super - Poder da carta 2 é: %d\n", superpoder2);
+
+   if (superpoder1 > superpoder2) {
+    printf("A carta 1 venceu");
+} else {
+    printf("A carta 2 venceu");
+}
+    }
     
-}  
